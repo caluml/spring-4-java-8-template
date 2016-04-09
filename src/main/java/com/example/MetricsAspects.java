@@ -23,10 +23,6 @@ public class MetricsAspects {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    public MetricsAspects() {
-        logger.info("Instantiated {}", this);
-    }
-
     @Around("@annotation(com.example.annotations.TimeExecution)")
     public Object timeExecution(ProceedingJoinPoint pjp) throws Throwable {
         final String methodName = pjp.getSignature().getName();

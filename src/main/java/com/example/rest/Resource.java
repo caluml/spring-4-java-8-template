@@ -21,7 +21,6 @@ public class Resource implements Api {
     public Resource(Dao dao, MetricUtils metrics) {
         this.dao = dao;
         this.metrics = metrics;
-        logger.info("Instantiated {}", this);
     }
 
     @Override
